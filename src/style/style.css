@@ -1,0 +1,63 @@
+body {
+  font-family: regular;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: #495371;
+  width: 100vw;
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+}
+
+.header * {
+  border: 3px solid white;
+  border-radius: 6px;
+  padding: .1rem .5rem;
+  cursor: pointer;
+  -webkit-transition: font-size 0.1s ease;
+  transition: font-size 0.1s ease;
+}
+
+.header *:hover {
+  color: #F1E0AC;
+  font-size: 2.5rem;
+  border: 3px solid #F1E0AC;
+}
+
+@font-face {
+  font-family: 'regular';
+  src: url("../fonts/Hero-Regular.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'bold';
+  src: url("../fonts/Hero-Bold.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'light';
+  src: url("../fonts/Hero-Light.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+/*# sourceMappingURL=style.css.map */
