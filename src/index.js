@@ -1,16 +1,19 @@
 import "./style/style.css";
-import * as task from "./modules/tasks.mjs";
+import * as task from "./modules/task.mjs";
+import * as project from "./modules/project.mjs";
 
 const form = document.getElementById("form");
 
 window.remove = task.removeTaskFromList;
-window.array = task.TaskArray;
+window.array = task.taskList;
 
 form.addEventListener('submit', function (e) {
     e.preventDefault();
-    task.addTaskToList(taskname.value);
+    task.createTask(taskname.value);
 });
 
-task.addTaskToList("Test Task 1");
-task.addTaskToList("Test Task 2");
-task.addTaskToList("Test Task 3");
+task.createTask("Test Task 1");
+task.createTask("Test Task 2");
+task.createTask("Test Task 3");
+
+project.createProject("test");

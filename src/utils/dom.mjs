@@ -1,7 +1,7 @@
-export function addHtmlElement(type, parent, content, classList) {
+export function addHtmlElement(type, parent, content, classList, id) {
     let element = document.createElement(type);
 
-    element.innerHTML = content;
+    if (content != null) { element.innerHTML = content; }
     element.classList.add(classList);
 
     parent.appendChild(element);

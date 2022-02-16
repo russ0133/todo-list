@@ -15,6 +15,7 @@ body {
     justify-content: center;
     align-items: center;
     .task {
+        border-radius: 12px;
         width: 18%;
         display: flex;
         margin: .5%;
@@ -26,7 +27,7 @@ body {
 
         .description {
             font-family: light;
-            font-size: 1.2rem;
+            font-size: 1rem;
             float: right;
         }
         .task-button {
