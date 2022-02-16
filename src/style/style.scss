@@ -1,37 +1,38 @@
-body {
-    font-family: regular;
+html {
+    background-color: #F1E0AC;
 }
-* {
+body {
+    height: 100vh;
     margin: 0;
     padding: 0;
+    font-family: regular;
 }
 
-.header {
-    background-color: #495371;
-    width: 100vw;
-    height: 10vh;
-
+.TaskLists {
+    background-color: red;
     display: flex;
-    justify-content: space-evenly;  
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    
-    font-size: 2rem;
-    color: white;
-    text-align: center;
+    .task {
+        width: 18%;
+        display: flex;
+        margin: .5%;
+        padding: 1%;
+        background-color: white;
+        font-size: 1.5rem;
+        font-family: bold;
+        flex-direction: column;
 
-
-    * {
-        border: 3px solid white;
-        border-radius: 6px;
-        padding: .1rem .5rem;
-        cursor: pointer;
-        transition: font-size 0.1s ease;
-    }
-
-    *:hover {
-        color: #F1E0AC;
-        font-size: 2.5rem;
-        border: 3px solid #F1E0AC;
+        .description {
+            font-family: light;
+            font-size: 1.2rem;
+            float: right;
+        }
+        .task-button {
+            align-self: flex-end;
+            transform: scale(1.5);
+        }
     }
 }
 

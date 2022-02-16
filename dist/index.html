@@ -7,10 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="./main.js" defer></script>
+    <script src="https://kit.fontawesome.com/53eb58f479.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <div class="header">
+        <h2>Add a Task</h2>
+    </div>
+    <form class="form" id="form">
+        <label for="taskname">New Task:</label><br>
+        <input type="text" id="taskname" name="taskname" placeholder="taskname">
+        <i class="fas fa-check-circle"></i>
+        <i class="fas fa-exclamation-circle"></i>
 
+        <small>Error message</small><br>
+        <button>Submit</button>
+    </form>
+    <h1>List of Tasks</h1>
+    <div class="TaskLists">
+    </div>
 </body>
 
 </html>

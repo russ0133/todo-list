@@ -1,43 +1,56 @@
+html {
+  background-color: #F1E0AC;
+}
+
 body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
   font-family: regular;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
-.header {
-  background-color: #495371;
-  width: 100vw;
-  height: 10vh;
+.TaskLists {
+  background-color: red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 2rem;
-  color: white;
-  text-align: center;
 }
 
-.header * {
-  border: 3px solid white;
-  border-radius: 6px;
-  padding: .1rem .5rem;
-  cursor: pointer;
-  -webkit-transition: font-size 0.1s ease;
-  transition: font-size 0.1s ease;
+.TaskLists .task {
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: .5%;
+  padding: 1%;
+  background-color: white;
+  font-size: 1.5rem;
+  font-family: bold;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.header *:hover {
-  color: #F1E0AC;
-  font-size: 2.5rem;
-  border: 3px solid #F1E0AC;
+.TaskLists .task .description {
+  font-family: light;
+  font-size: 1.2rem;
+  float: right;
+}
+
+.TaskLists .task .task-button {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 @font-face {
