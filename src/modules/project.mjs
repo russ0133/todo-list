@@ -10,6 +10,7 @@ export class Project {
 
 export function createProject(projectName) {
     let project = new Project(projectName);
-    projectList.push(project);
-    console.log("🚀 ~ file: project.mjs ~ line 11 ~ createNewProject ~ createNewProject(projectName)", projectName)
+    let projectid = projectList.push(project);
+    project.id = projectid - 1;
+    console.log(projectid);
 }

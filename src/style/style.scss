@@ -8,33 +8,49 @@ body {
     font-family: regular;
 }
 
-.TaskLists {
+.projectList {
+  display:flex;
+  flex-direction: column;
+  gap: 150px;
+}
+.project {
     background-color: red;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    .task {
-        border-radius: 12px;
-        width: 18%;
-        display: flex;
-        margin: .5%;
-        padding: 1%;
-        background-color: white;
-        font-size: 1.5rem;
-        font-family: bold;
-        flex-direction: column;
-
-        .description {
-            font-family: light;
-            font-size: 1rem;
-            float: right;
-        }
-        .task-button {
-            align-self: flex-end;
-            transform: scale(1.5);
-        }
+    .project-title {
+      font-size: 3rem;
+      color: blue;
     }
+    .project-content {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      .task {
+          border-radius: 12px;
+          width: 25%;
+          display: flex;
+          margin: .5%;
+          padding: 1%;
+          background-color: white;
+          font-size: 1.5rem;
+          font-family: bold;
+          flex-direction: column;
+
+          .description {
+              font-family: light;
+              font-size: 1rem;
+              float: right;
+          }
+          .task-button {
+              align-self: flex-end;
+              transform: scale(1.5);
+          }
+      }
+    }
+
 }
 
 @font-face {

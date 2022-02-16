@@ -5,15 +5,21 @@ import * as project from "./modules/project.mjs";
 const form = document.getElementById("form");
 
 window.remove = task.removeTaskFromList;
-window.array = task.taskList;
+window.tasklist = task.taskList;
+window.projectlist = project.projectList;
 
 form.addEventListener('submit', function (e) {
     e.preventDefault();
-    task.createTask(taskname.value);
+    task.createTask(taskname.value, 0);
 });
+project.createProject("Project 1");
+project.createProject("Project 2");
 
-task.createTask("Test Task 1");
-task.createTask("Test Task 2");
-task.createTask("Test Task 3");
 
-project.createProject("test");
+task.createTask("Test Task 1", 0);
+task.createTask("Test Task 2", 0);
+task.createTask("Test Task 3", 0);
+
+task.createTask("Test Task 4", 1);
+task.createTask("Test Task 5", 1);
+task.createTask("Test Task 6", 1);

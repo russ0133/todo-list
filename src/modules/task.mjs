@@ -28,12 +28,12 @@ export class Task {
     }
 }
 
-export function createTask(task, project) {
-
+export function createTask(task, projectid) {
     // ? This creates a new object and pushes it into an array
     let taskObject = new Task(task, "-> Task Description", 0, "22 / 01 / 2022", "big", true);
     let taskId = taskList.push(taskObject);
 
+    taskObject.projectid = projectid;
     taskObject.id = taskId - 1; // ! For some reason I need to do this so the id is equal to the array index
 
     display.updateList();
