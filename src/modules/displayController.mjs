@@ -1,4 +1,5 @@
 import * as task from "./task.mjs";
+import * as project from "./project.mjs";
 import * as dom from "../utils/dom.mjs";
 
 const $TaskLists = document.querySelector('.TaskLists');
@@ -14,16 +15,8 @@ export function updateList() {
 function createTaskHtml(taskObject) {
     // ? This creates the HTML for each button, as such .task>.title+.description+.button
     // ? Task Div
-    let $taskDiv = document.createElement("div");
-    $taskDiv.classList.add("task");
-    $taskDiv.id = taskObject.id;
-    $TaskLists.appendChild($taskDiv);
-
-    // ? Task Title
-    let $taskTitle = document.createElement("div");
-    $taskTitle.innerText = taskObject.title;
-    $taskTitle.classList.add("title");
-    $taskDiv.appendChild($taskTitle);
+    let $taskDiv = dom.addHtmlElement("div", $TaskLists, null, "task", taskObject.id);
+    let $taskTitle = dom.addHtmlElement("div", $taskDiv, taskObject.title, "title");
 
     // ? Task Description (Child of Task Title)
     let $taskDescription = document.createElement("div");

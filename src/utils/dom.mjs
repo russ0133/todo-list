@@ -3,9 +3,8 @@ export function addHtmlElement(type, parent, content, classList, id) {
 
     if (content != null) { element.innerHTML = content; }
     element.classList.add(classList);
+    element.id = id;
 
     parent.appendChild(element);
-    console.log("Create element: " + element.classList);
-
     return element;
 }
