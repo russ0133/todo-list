@@ -499,6 +499,10 @@ body {
       flex-wrap: wrap;
 }
 
+body .hidden {
+  display: none !important;
+}
+
 body .left-side {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -522,6 +526,7 @@ body .left-side .header {
   color: var(--color-500);
   background-color: var(--color-600);
   width: 104%;
+  cursor: pointer;
 }
 
 body .left-side .header i {
@@ -547,13 +552,14 @@ body .left-side #form {
           align-items: center;
 }
 
-body .left-side #form #taskname {
+body .left-side #form input {
   border: 2px solid var(--color-700);
   padding: 0px 5px;
   border-radius: 6px;
+  margin-bottom: 5%;
 }
 
-body .left-side #form #taskname:focus {
+body .left-side #form input:focus {
   border: 2px solid var(--color-800);
 }
 
@@ -569,7 +575,7 @@ body .left-side #form button {
 body .left-side #form label {
   font-family: light;
   color: gray;
-  margin-bottom: 5%;
+  margin-bottom: 2%;
 }
 
 body .projectList {

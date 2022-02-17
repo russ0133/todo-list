@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Task List</title>
     <script src="./main.js" defer></script>
     <script src="https://kit.fontawesome.com/53eb58f479.js" crossorigin="anonymous"></script>
 </head>
@@ -13,9 +13,11 @@
 <body>
     <div class="left-side">
         <div class="header"><i class="fa-solid fa-circle-plus fa-xs"></i>New Task</div>
-        <form class="form" id="form">
-            <label for="taskname">what do you have to do?</label><br>
-            <input type="text" id="taskname" name="taskname" placeholder="name">
+        <form class="form hidden" id="form">
+            <label for="taskname">task title</label><br>
+            <input type="text" id="taskname" name="taskname" placeholder="wash the dishes">
+            <label for="description">task description</label><br>
+            <input type="text" id="taskdescription" name="taskdescription" placeholder="every day at 6pm">
             <button>create</button>
         </form>
     </div>

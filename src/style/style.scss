@@ -31,6 +31,9 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
 
+  .hidden {
+    display:none !important;
+  }
   .left-side {
     display: flex;
     flex-direction: column;
@@ -49,6 +52,7 @@ body {
       color: var(--color-500);
       background-color: var(--color-600);
       width: 104%;
+      cursor: pointer;
     }
     #form {
       background-color: var(--color-500);
@@ -58,28 +62,28 @@ body {
       flex-direction: column;
       padding: 2%;
       align-items:center;
-      #taskname {
+      input {
         border: 2px solid var(--color-700);
         padding: 0px 5px;
         border-radius: 6px;
+        margin-bottom: 5%;
       }
-      #taskname:focus {
+      input:focus {
       border: 2px solid var(--color-800);
       }
-
-        *:nth-child(3) {
-          margin-bottom: 5%;
-        }
-        button {
-          width: 90%;
-          border-radius: 12px;
-        }
-        label {
-          font-family: light;
-          color: gray;
-          margin-bottom: 5%;
-        }
+      *:nth-child(3) {
+        margin-bottom: 5%;
       }
+      button {
+        width: 90%;
+        border-radius: 12px;
+      }
+      label {
+        font-family: light;
+        color: gray;
+        margin-bottom: 2%;
+      }
+    }
   }
   
   .projectList {

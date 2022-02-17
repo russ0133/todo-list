@@ -26,9 +26,9 @@ export class Task {
     }
 }
 
-export function createTask(taskname, projectid) {
+export function createTask(taskname, description, projectid) {
     // ? This creates a new object and pushes it into an array
-    let taskObject = new Task(taskname, "-> Task Description", 0, "22 / 01 / 2022", "big", true);
+    let taskObject = new Task(taskname, "-> " + description, 0, "22 / 01 / 2022", "big", true);
     let taskId = taskList.push(taskObject);
 
     taskObject.projectid = projectid;
