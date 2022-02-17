@@ -16,7 +16,23 @@ html {
   margin: 0;
 }
 
+@keyframes appear {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes appearFromTop {
+  from { top: -200px; }
+  to { top: 0px; visibility: visible; }
+}
 
+.appear { 
+  animation-name: appear;
+  animation-duration: 2s;
+}
+.appearFromTop {
+  animation-name: appearFromTop;
+  animation-duration: .5s;
+}
 body {
   font-family: regular;
   background-color: var(--color-800);
@@ -45,6 +61,7 @@ body {
         top: 1px;
         margin-right: 3%;
       }
+      z-index: 1;
       padding: 2%;
       font-size: 1.3rem;
       text-align: center;
@@ -55,6 +72,9 @@ body {
       cursor: pointer;
     }
     #form {
+      position: relative;
+      -webkit-animation-fill-mode: forwards;
+      visibility: hidden;
       background-color: var(--color-500);
       border-bottom-left-radius: 12px;
       border-bottom-right-radius: 12px;
@@ -62,6 +82,7 @@ body {
       flex-direction: column;
       padding: 2%;
       align-items:center;
+
       input {
         border: 2px solid var(--color-700);
         padding: 0px 5px;

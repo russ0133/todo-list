@@ -1,6 +1,7 @@
 import "./style/style.css";
 import * as task from "./modules/task.mjs";
 import * as project from "./modules/project.mjs";
+import * as display from "./modules/displayController.mjs";
 
 const form = document.getElementById("form");
 const $FormHeader = document.querySelector(".header");
@@ -12,7 +13,8 @@ window.deleteproject = project.deleteProject;
 
 $FormHeader.addEventListener('click', function (e) {
     e.preventDefault();
-    form.classList.toggle("hidden");
+    form.classList.toggle("appearFromTop");
+    console.log("test");
 });
 form.addEventListener('submit', function (e) {
     e.preventDefault();
@@ -21,12 +23,7 @@ form.addEventListener('submit', function (e) {
     // eslint-disable-next-line no-undef
     task.createTask(taskname.value, taskdescription.value, 0);
 });
-project.createProject("Daily Life");
+project.createProject("Default Project");
 project.createProject("Work");
 
-
-task.createTask("Clean the Bathroom", "test", 0);
-task.createTask("Cook Dinner", "testa", 0);
-task.createTask("Go for a Run", "test", 0);
-
-task.createTask("Check e-mails", "folaos", 1);
+display.updateList();

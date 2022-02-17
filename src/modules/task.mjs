@@ -5,7 +5,7 @@ export let taskList = [];
 taskList.splice(0, taskList.length); // Resets the array.
 
 export class Task {
-    constructor(title, description, id, date, priority, visible, projectid) {
+    constructor(title, description, id, date, priority, visible, projectid, initialized) {
         this.title = title;
         this.description = description;
         this.id = id;
@@ -13,6 +13,7 @@ export class Task {
         this.priority = priority;
         this.visible = visible;
         this.projectid = projectid;
+        this.initialized = initialized;
     }
     setProject(project) {
         this.projectid = project;
@@ -28,7 +29,7 @@ export class Task {
 
 export function createTask(taskname, description, projectid) {
     // ? This creates a new object and pushes it into an array
-    let taskObject = new Task(taskname, "-> " + description, 0, "22 / 01 / 2022", "big", true);
+    let taskObject = new Task(taskname, "-> " + description, 0, "22 / 01 / 2022", "big", true, false);
     let taskId = taskList.push(taskObject);
 
     taskObject.projectid = projectid;

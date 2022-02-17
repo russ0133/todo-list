@@ -3,6 +3,8 @@ import * as project from "./project.mjs";
 import * as dom from "../utils/dom.mjs";
 
 const $projectList = document.querySelector('.projectList');
+export let hasBeenInitialisedBefore = [];
+
 
 export function updateList() {
     dom.removeAllHtml($projectList); // ? Removes all the HTMl from inside $projectList
@@ -20,6 +22,7 @@ export function updateList() {
 
 function createProjectHtml(projectObject) {
     // ? This create the HTML  for each project, as such .project>.project-title+.project-content
+    console.log("teste");
     let projectHtmlId = "project-" + projectObject.id;
     let projectContentId = "project-" + projectObject.id + "-content";
 
@@ -43,4 +46,9 @@ function createTaskHtml(taskObject) {
     $taskButton.dataset.id = taskObject.id;
     $taskButton.name = "checkbox";
     $taskButton.onclick = function () { task.removeTaskFromList(taskObject.id); }
+
+    if (!taskObject.initialized) {
+        $taskDiv.classList.add("appear");
+        taskObject.initialized = true;
+    }
 }

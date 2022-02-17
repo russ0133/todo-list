@@ -474,6 +474,58 @@ html {
   margin: 0;
 }
 
+@-webkit-keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes appearFromTop {
+  from {
+    top: -200px;
+  }
+  to {
+    top: 0px;
+    visibility: visible;
+  }
+}
+
+@keyframes appearFromTop {
+  from {
+    top: -200px;
+  }
+  to {
+    top: 0px;
+    visibility: visible;
+  }
+}
+
+.appear {
+  -webkit-animation-name: appear;
+          animation-name: appear;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.appearFromTop {
+  -webkit-animation-name: appearFromTop;
+          animation-name: appearFromTop;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+}
+
 body {
   font-family: regular;
   background-color: var(--color-800);
@@ -519,6 +571,7 @@ body .left-side {
 }
 
 body .left-side .header {
+  z-index: 1;
   padding: 2%;
   font-size: 1.3rem;
   text-align: center;
@@ -536,6 +589,9 @@ body .left-side .header i {
 }
 
 body .left-side #form {
+  position: relative;
+  -webkit-animation-fill-mode: forwards;
+  visibility: hidden;
   background-color: var(--color-500);
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
