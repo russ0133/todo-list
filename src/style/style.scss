@@ -19,14 +19,29 @@ html {
 body {
   font-family: regular;
   background-color: var(--color-800);
-    
+  background-image: url("../img/backgroundd2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  #form {
+    border: 5px red solid;
+  }
   .projectList {
     display:flex;
     flex-direction: column;
     background-color: var(--color-500);
     border-radius: 12px;
-    margin: 0 10%;
-
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    margin: 1% 5%;
+    width: 60%;
+    min-height: 90vh;
     .project {
       margin-bottom: 1%;
       border-radius: 12px;
@@ -81,9 +96,13 @@ body {
     }
   }
   @media screen and (max-width:500px) {
+    body {
+      flex-direction: column !important;
+    }
     .projectList {
       margin: 0;
       border-radius: 0px;
+      width: 100%;
     }
     .description {
       display:none;

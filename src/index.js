@@ -12,6 +12,8 @@ window.deleteproject = project.deleteProject;
 form.addEventListener('submit', function (e) {
     e.preventDefault();
     // eslint-disable-next-line no-undef
+    if (taskname.value == "") return window.alert("You must write something");
+    // eslint-disable-next-line no-undef
     task.createTask(taskname.value, 0);
 });
 project.createProject("Project 1");
@@ -23,5 +25,3 @@ task.createTask("Test Task 2", 0);
 task.createTask("Test Task 3", 0);
 
 task.createTask("Test Task 4", 1);
-task.createTask("Test Task 5", 1);
-task.createTask("Test Task 6", 1);

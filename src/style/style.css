@@ -19,6 +19,30 @@ html {
 body {
   font-family: regular;
   background-color: var(--color-800);
+  background-image: url("../img/backgroundd2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body #form {
+  border: 5px red solid;
 }
 
 body .projectList {
@@ -31,7 +55,11 @@ body .projectList {
           flex-direction: column;
   background-color: var(--color-500);
   border-radius: 12px;
-  margin: 0 10%;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  margin: 1% 5%;
+  width: 60%;
+  min-height: 90vh;
 }
 
 body .projectList .project {
@@ -113,9 +141,16 @@ body .projectList .project .project-content .task .title .task-button {
 }
 
 @media screen and (max-width: 500px) {
+  body body {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
   body .projectList {
     margin: 0;
     border-radius: 0px;
+    width: 100%;
   }
   body .description {
     display: none;
