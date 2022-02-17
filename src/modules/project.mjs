@@ -20,10 +20,12 @@ export function createProject(projectName) {
 }
 
 export function deleteProject(projectId) {
+
     let tasksInThisProject = task.taskList.filter(ele => ele.projectid == projectId);
     tasksInThisProject.forEach(element => element.visible = false);
 
     console.log(tasksInThisProject);
     projectList[projectId].visible = false;
     displayController.updateList();
+
 }

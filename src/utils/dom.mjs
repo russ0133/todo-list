@@ -8,3 +8,7 @@ export function addHtmlElement(tag, parent, content, classList, id) {
     parent.appendChild(element);
     return element;
 }
+
+export function removeAllHtml(selector) {
+    selector.innerHTML = "";
+}

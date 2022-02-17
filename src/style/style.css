@@ -1,15 +1,27 @@
 html {
-  background-color: #F1E0AC;
+  --color-500: #FBF8F1;
+  --color-600: #F7ECDE;
+  --color-700: #E9DAC1;
+  --color-800: #54BAB9;
+  position: relative;
+  min-height: 100%;
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-  height: 100vh;
-  margin: 0;
-  padding: 0;
   font-family: regular;
+  background-color: var(--color-800);
 }
 
-.projectList {
+body .projectList {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -17,16 +29,69 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 150px;
+  background-color: var(--color-500);
+  border-radius: 12px;
+  margin: 0 10%;
 }
 
-.project {
-  background-color: red;
+body .projectList .project {
+  margin-bottom: 1%;
+  border-radius: 12px;
+  padding: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .projectList .project .project-title {
+  font-size: 2rem;
+  font-family: bold;
+  color: var(--color-800);
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-bottom: 1%;
+}
+
+body .projectList .project .project-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+body .projectList .project .project-content .task {
+  width: 100%;
+  border-radius: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: .5%;
+  padding: 1%;
+  background-color: var(--color-500);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 2px var(--color-700) solid;
+}
+
+body .projectList .project .project-content .task .description {
+  font-family: light;
+  font-size: 1.1rem;
+}
+
+body .projectList .project .project-content .task .title {
+  font-family: bold;
+  font-size: 1.2rem;
+  color: #5a5959;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -34,55 +99,30 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  margin-bottom: -1%;
 }
 
-.project .project-title {
-  font-size: 3rem;
-  color: blue;
-}
-
-.project .project-content {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-.project .project-content .task {
-  border-radius: 12px;
-  width: 25%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: .5%;
-  padding: 1%;
-  background-color: white;
-  font-size: 1.5rem;
-  font-family: bold;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.project .project-content .task .description {
-  font-family: light;
-  font-size: 1rem;
-  float: right;
-}
-
-.project .project-content .task .task-button {
+body .projectList .project .project-content .task .title .task-button {
+  position: relative;
   -ms-flex-item-align: end;
       align-self: flex-end;
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  right: 5%;
+  bottom: 25%;
+}
+
+@media screen and (max-width: 500px) {
+  body .projectList {
+    margin: 0;
+    border-radius: 0px;
+  }
+  body .description {
+    display: none;
+  }
+  body .task-button {
+    bottom: 35% !important;
+  }
 }
 
 @font-face {

@@ -1,8 +1,6 @@
 import * as display from "./displayController.mjs";
 import * as project from "./project.mjs";
 
-const $TaskLists = document.querySelector('.TaskLists');
-
 export let taskList = [];
 taskList.splice(0, taskList.length); // Resets the array.
 
@@ -41,16 +39,10 @@ export function createTask(taskname, projectid) {
 
 }
 
-function addTaskToProject(task, project) {
-    task.projectId = project;
-    console.log("addTaskToProject: " + task + " " + project);
-}
-
 export function removeTaskFromList(taskId) {
     const taskSelector = document.getElementById(taskId);
     let taskObject = taskList[taskId];
     taskSelector.remove();
     taskObject.getData();
     taskObject.makeInvisible();
-    console.log("removeTaskFromList");
 }
