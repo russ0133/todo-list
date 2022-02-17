@@ -16,12 +16,12 @@ form.addEventListener('submit', function (e) {
     // eslint-disable-next-line no-undef
     task.createTask(taskname.value, 0);
 });
-project.createProject("Project 1");
-project.createProject("Project 2");
+project.createProject("Daily Life");
+project.createProject("Work");
 
 
-task.createTask("Test Task 1", 0);
-task.createTask("Test Task 2", 0);
-task.createTask("Test Task 3", 0);
+task.createTask("Clean the Bathroom", 0);
+task.createTask("Cook Dinner", 0);
+task.createTask("Go for a Run", 0);
 
-task.createTask("Test Task 4", 1);
+task.createTask("Check e-mails", 1);

@@ -27,9 +27,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -41,8 +41,60 @@ body {
       flex-wrap: wrap;
 }
 
-body #form {
-  border: 5px red solid;
+body .left-side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .left-side .header {
+  height: 2rem;
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: bold;
+  color: gray;
+  background-color: var(--color-600);
+  width: 104%;
+}
+
+body .left-side #form {
+  background-color: var(--color-500);
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .left-side #form *:nth-child(3) {
+  margin-bottom: 5%;
+}
+
+body .left-side #form button {
+  width: 90%;
+  border-radius: 12px;
+}
+
+body .left-side #form label {
+  font-family: light;
+  color: gray;
 }
 
 body .projectList {
@@ -57,8 +109,8 @@ body .projectList {
   border-radius: 12px;
   -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  margin: 1% 5%;
-  width: 60%;
+  margin: 1% 1%;
+  width: 75%;
   min-height: 90vh;
 }
 
@@ -146,6 +198,13 @@ body .projectList .project .project-content .task .title .task-button {
     -webkit-box-direction: normal !important;
         -ms-flex-direction: column !important;
             flex-direction: column !important;
+  }
+  body .left-side, body #form {
+    width: 100%;
+    border-radius: 0px !important;
+  }
+  body .left-side button, body #form button {
+    width: 25% !important;
   }
   body .projectList {
     margin: 0;
