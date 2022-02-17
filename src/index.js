@@ -7,9 +7,11 @@ const form = document.getElementById("form");
 window.remove = task.removeTaskFromList;
 window.tasklist = task.taskList;
 window.projectlist = project.projectList;
+window.deleteproject = project.deleteProject;
 
 form.addEventListener('submit', function (e) {
     e.preventDefault();
+    // eslint-disable-next-line no-undef
     task.createTask(taskname.value, 0);
 });
 project.createProject("Project 1");

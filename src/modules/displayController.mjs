@@ -7,6 +7,7 @@ const $projectList = document.querySelector('.projectList');
 export function updateList() {
     removeAllHtml($projectList); // ? Removes all the HTMl from inside $projectList
     project.projectList.forEach(currentItem => {
+        if (!currentItem.visible) return;
         createProjectHtml(currentItem);
     })
     task.taskList.forEach(currentItem => {
