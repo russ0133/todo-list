@@ -14,7 +14,6 @@ window.deleteproject = project.deleteProject;
 $FormHeader.addEventListener('click', function (e) {
     e.preventDefault();
     form.classList.toggle("appearFromTop");
-    console.log("test");
 });
 form.addEventListener('submit', function (e) {
     e.preventDefault();
@@ -26,4 +25,5 @@ form.addEventListener('submit', function (e) {
 project.createProject("Default Project");
 project.createProject("Work");
 
+task.loadTasks();
 display.updateList();

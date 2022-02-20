@@ -515,8 +515,8 @@ html {
 .appear {
   -webkit-animation-name: appear;
           animation-name: appear;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
 }
 
 .appearFromTop {

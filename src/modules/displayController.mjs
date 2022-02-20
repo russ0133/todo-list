@@ -10,19 +10,18 @@ export function updateList() {
     dom.removeAllHtml($projectList); // ? Removes all the HTMl from inside $projectList
 
     project.projectList.forEach(currentItem => {
-        if (!currentItem.visible) return;
+        if (!currentItem.visible) return 0;
         createProjectHtml(currentItem);
     })
 
     task.taskList.forEach(currentItem => {
-        if (!currentItem.visible) return;
+        if (!currentItem.visible) return 0;
         createTaskHtml(currentItem);
     });
 }
 
 function createProjectHtml(projectObject) {
     // ? This create the HTML  for each project, as such .project>.project-title+.project-content
-    console.log("teste");
     let projectHtmlId = "project-" + projectObject.id;
     let projectContentId = "project-" + projectObject.id + "-content";
 
@@ -47,8 +46,8 @@ function createTaskHtml(taskObject) {
     $taskButton.name = "checkbox";
     $taskButton.onclick = function () { task.removeTaskFromList(taskObject.id); }
 
-    if (!taskObject.initialized) {
-        $taskDiv.classList.add("appear");
+    if (taskObject.initialized == false) {
         taskObject.initialized = true;
+        $taskDiv.classList.add("appear");
     }
 }

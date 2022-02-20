@@ -16,7 +16,6 @@ export function createProject(projectName) {
     let project = new Project(projectName, null, true);
     let projectid = projectList.push(project);
     project.id = projectid - 1;
-    console.log(projectid);
 }
 
 export function deleteProject(projectId) {
